@@ -18,7 +18,12 @@ Adafruit_GPS GPS(&Serial1);
 Adafruit_BNO055 bno = Adafruit_BNO055(-1, 0x28);
 Adafruit_BMP3XX bmp; // I2C
 
+//uint32_t timer = millis();
+//const int chipSelect = 15;
+
 void setup() {
+  //-----------------------------------------------------------SD CARD SETUP END-------------------------------------------------------------------------
+
 
   //-----------------------------------------------------------SENSOR SETUP BEGIN------------------------------------------------------------------------
   //Start with GPS
