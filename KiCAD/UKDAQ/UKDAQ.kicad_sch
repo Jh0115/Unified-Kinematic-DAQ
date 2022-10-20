@@ -793,15 +793,15 @@
 
   (no_connect (at 251.46 78.74) (uuid 0c13de7d-30b0-4e0a-9889-e75bdd689739))
   (no_connect (at 240.03 78.74) (uuid 1072a4b6-cb0b-453c-b255-d74b9f130a22))
-  (no_connect (at 243.84 78.74) (uuid 1072a4b6-cb0b-453c-b255-d74b9f130a22))
+  (no_connect (at 243.84 78.74) (uuid 1072a4b6-cb0b-453c-b255-d74b9f130a23))
   (no_connect (at 83.82 199.39) (uuid 35374598-58a9-4c2e-8db0-39009d1ec22a))
-  (no_connect (at 83.82 196.85) (uuid 35374598-58a9-4c2e-8db0-39009d1ec22a))
-  (no_connect (at 83.82 176.53) (uuid 35374598-58a9-4c2e-8db0-39009d1ec22a))
-  (no_connect (at 83.82 179.07) (uuid 35374598-58a9-4c2e-8db0-39009d1ec22a))
-  (no_connect (at 83.82 214.63) (uuid 35374598-58a9-4c2e-8db0-39009d1ec22a))
-  (no_connect (at 83.82 212.09) (uuid 35374598-58a9-4c2e-8db0-39009d1ec22a))
+  (no_connect (at 83.82 196.85) (uuid 35374598-58a9-4c2e-8db0-39009d1ec22b))
+  (no_connect (at 83.82 176.53) (uuid 35374598-58a9-4c2e-8db0-39009d1ec22c))
+  (no_connect (at 83.82 179.07) (uuid 35374598-58a9-4c2e-8db0-39009d1ec22d))
+  (no_connect (at 83.82 214.63) (uuid 35374598-58a9-4c2e-8db0-39009d1ec22e))
+  (no_connect (at 83.82 212.09) (uuid 35374598-58a9-4c2e-8db0-39009d1ec22f))
   (no_connect (at 247.65 54.61) (uuid a0b472d5-fcbc-4657-b7bf-45663888f666))
-  (no_connect (at 243.84 54.61) (uuid a0b472d5-fcbc-4657-b7bf-45663888f666))
+  (no_connect (at 243.84 54.61) (uuid a0b472d5-fcbc-4657-b7bf-45663888f667))
 
   (wire (pts (xy 209.55 39.37) (xy 209.55 40.64))
     (stroke (width 0) (type default) (color 0 0 0 0))
@@ -1214,6 +1214,17 @@
   (wire (pts (xy 83.82 217.17) (xy 107.95 217.17))
     (stroke (width 0) (type default) (color 0 0 0 0))
     (uuid ff030f5c-42b4-436c-a701-759f38d98bdc)
+  )
+
+  (text "One of the GPIO pins will need to be configured as an interrupt for the deep-sleep mode"
+    (at 67.31 156.21 0)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid b1bf2df3-62b4-4200-91e6-cccc71506c41)
+  )
+  (text "I might be able to use internal pull-up resistors for these\nEDIT: nvm, the GPIO pins with I2C interface only support pulldown and high impedance configurations"
+    (at 99.06 243.84 0)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid c2ca5a86-c56c-4f8d-836e-59076e5ecb55)
   )
 
   (symbol (lib_id "power:+5V") (at 373.38 212.09 90) (unit 1)
