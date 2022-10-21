@@ -1,0 +1,38 @@
+22:27:42 **** Build of configuration Debug for project Hello_World ****
+make ECLIPSE=1 all 
+/C/Users/Joseph/eclipse/Firmware/MAX32660/Libraries/MAX32660PeriphDriver/periphdriver.mk:75: target `/c/Users/Joseph/Documents/UKDAQ/Unified-Kinematic-DAQ/Dev' given more than once in the same rule.
+/C/Users/Joseph/eclipse/Firmware/MAX32660/Libraries/MAX32660PeriphDriver/periphdriver.mk:75: target `/c/Users/Joseph/Documents/UKDAQ/Unified-Kinematic-DAQ/Dev' given more than once in the same rule.
+/C/Users/Joseph/eclipse/Firmware/MAX32660/Libraries/MAX32660PeriphDriver/periphdriver.mk:75: target `board' given more than once in the same rule.
+/C/Users/Joseph/eclipse/Firmware/MAX32660/Libraries/CMSIS/Device/Maxim/MAX32660/Source/GCC/gcc.mk:250: warning: overriding commands for target `/c/Users/Joseph/Documents/UKDAQ/Unified-Kinematic-DAQ/Dev'
+/C/Users/Joseph/eclipse/Firmware/MAX32660/Libraries/MAX32660PeriphDriver/periphdriver.mk:76: warning: ignoring old commands for target `/c/Users/Joseph/Documents/UKDAQ/Unified-Kinematic-DAQ/Dev'
+/C/Users/Joseph/eclipse/Firmware/MAX32660/Libraries/CMSIS/Device/Maxim/MAX32660/Source/GCC/gcc.mk:250: warning: overriding commands for target `board'
+/C/Users/Joseph/eclipse/Firmware/MAX32660/Libraries/MAX32660PeriphDriver/periphdriver.mk:76: warning: ignoring old commands for target `board'
+/C/Users/Joseph/eclipse/Firmware/MAX32660/Libraries/CMSIS/Device/Maxim/MAX32660/Source/GCC/gcc.mk:266: warning: overriding commands for target `/c/Users/Joseph/Documents/UKDAQ/Unified-Kinematic-DAQ/Dev'
+/C/Users/Joseph/eclipse/Firmware/MAX32660/Libraries/CMSIS/Device/Maxim/MAX32660/Source/GCC/gcc.mk:250: warning: ignoring old commands for target `/c/Users/Joseph/Documents/UKDAQ/Unified-Kinematic-DAQ/Dev'
+/C/Users/Joseph/eclipse/Firmware/MAX32660/Libraries/CMSIS/Device/Maxim/MAX32660/Source/GCC/gcc.mk:266: warning: overriding commands for target `board'
+/C/Users/Joseph/eclipse/Firmware/MAX32660/Libraries/CMSIS/Device/Maxim/MAX32660/Source/GCC/gcc.mk:250: warning: ignoring old commands for target `board'
+/C/Users/Joseph/eclipse/Firmware/MAX32660/Libraries/CMSIS/Device/Maxim/MAX32660/Source/GCC/gcc.mk:282: warning: overriding commands for target `/c/Users/Joseph/Documents/UKDAQ/Unified-Kinematic-DAQ/Dev'
+/C/Users/Joseph/eclipse/Firmware/MAX32660/Libraries/CMSIS/Device/Maxim/MAX32660/Source/GCC/gcc.mk:266: warning: ignoring old commands for target `/c/Users/Joseph/Documents/UKDAQ/Unified-Kinematic-DAQ/Dev'
+/C/Users/Joseph/eclipse/Firmware/MAX32660/Libraries/CMSIS/Device/Maxim/MAX32660/Source/GCC/gcc.mk:282: warning: overriding commands for target `board'
+/C/Users/Joseph/eclipse/Firmware/MAX32660/Libraries/CMSIS/Device/Maxim/MAX32660/Source/GCC/gcc.mk:266: warning: ignoring old commands for target `board'
+/C/Users/Joseph/eclipse/Firmware/MAX32660/Libraries/CMSIS/Device/Maxim/MAX32660/Source/GCC/gcc.mk:295: warning: overriding commands for target `/c/Users/Joseph/Documents/UKDAQ/Unified-Kinematic-DAQ/Dev'
+/C/Users/Joseph/eclipse/Firmware/MAX32660/Libraries/CMSIS/Device/Maxim/MAX32660/Source/GCC/gcc.mk:282: warning: ignoring old commands for target `/c/Users/Joseph/Documents/UKDAQ/Unified-Kinematic-DAQ/Dev'
+/C/Users/Joseph/eclipse/Firmware/MAX32660/Libraries/CMSIS/Device/Maxim/MAX32660/Source/GCC/gcc.mk:295: warning: overriding commands for target `board'
+/C/Users/Joseph/eclipse/Firmware/MAX32660/Libraries/CMSIS/Device/Maxim/MAX32660/Source/GCC/gcc.mk:282: warning: ignoring old commands for target `board'
+/C/Users/Joseph/eclipse/Firmware/MAX32660/Libraries/CMSIS/Device/Maxim/MAX32660/Source/GCC/gcc.mk:305: warning: overriding commands for target `/c/Users/Joseph/Documents/UKDAQ/Unified-Kinematic-DAQ/Dev'
+/C/Users/Joseph/eclipse/Firmware/MAX32660/Libraries/CMSIS/Device/Maxim/MAX32660/Source/GCC/gcc.mk:295: warning: ignoring old commands for target `/c/Users/Joseph/Documents/UKDAQ/Unified-Kinematic-DAQ/Dev'
+/C/Users/Joseph/eclipse/Firmware/MAX32660/Libraries/CMSIS/Device/Maxim/MAX32660/Source/GCC/gcc.mk:305: warning: overriding commands for target `board'
+/C/Users/Joseph/eclipse/Firmware/MAX32660/Libraries/CMSIS/Device/Maxim/MAX32660/Source/GCC/gcc.mk:295: warning: ignoring old commands for target `board'
+make: *** No rule to make target `%.S', needed by `/c/Users/Joseph/Documents/UKDAQ/Unified-Kinematic-DAQ/Dev'.  Stop.
+22:28:31 **** Incremental Build of configuration Debug for project Hello_World ****
+make ECLIPSE=1 all 
+/C/Users/Joseph/eclipse/Firmware/MAX32660/Libraries/MAX32660PeriphDriver/periphdriver.mk:75: target `/c/Users/Joseph/Documents/UKDAQ/Unified-Kinematic-DAQ/Dev' given more than once in the same rule.
+/C/Users/Joseph/eclipse/Firmware/MAX32660/Libraries/MAX32660PeriphDriver/periphdriver.mk:75: target `/c/Users/Joseph/Documents/UKDAQ/Unified-Kinematic-DAQ/Dev' given more than once in the same rule.
+/C/Users/Joseph/eclipse/Firmware/MAX32660/Libraries/MAX32660PeriphDriver/periphdriver.mk:75: target `board' given more than once in the same rule.
+make: *** /c/Users/Joseph/Documents/UKDAQ/Unified-Kinematic-DAQ/Dev: Invalid request code.  Stop.
+22:29:06 **** Incremental Build of configuration Debug for project Hello_World ****
+make ECLIPSE=1 all 
+/C/Users/Joseph/eclipse/Firmware/MAX32660/Libraries/MAX32660PeriphDriver/periphdriver.mk:75: target `/c/Users/Joseph/Documents/UKDAQ/Unified-Kinematic-DAQ/Dev' given more than once in the same rule.
+/C/Users/Joseph/eclipse/Firmware/MAX32660/Libraries/MAX32660PeriphDriver/periphdriver.mk:75: target `/c/Users/Joseph/Documents/UKDAQ/Unified-Kinematic-DAQ/Dev' given more than once in the same rule.
+/C/Users/Joseph/eclipse/Firmware/MAX32660/Libraries/MAX32660PeriphDriver/periphdriver.mk:75: target `board' given more than once in the same rule.
+make: *** /c/Users/Joseph/Documents/UKDAQ/Unified-Kinematic-DAQ/Dev: Invalid request code.  Stop.

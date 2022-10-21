@@ -18,17 +18,28 @@ press = data(:,10); %pressure in hPa
 alt = data(:,11); %altitude from pressure in m
 
 %% Step 2: Filter outliers
-accel = dynamicOutlierFiltering(accel)
-quat = dynamicOutlierFiltering(quat)
-temp = dynamicOutlierFiltering(temp)
-press = dynamicOutlierFiltering(press)
-alt = dynamicOutlierFiltering(alt)
+accel = dynamicOutlierFiltering(accel);
+quat = dynamicOutlierFiltering(quat);
+temp = dynamicOutlierFiltering(temp);
+press = dynamicOutlierFiltering(press);
+alt = dynamicOutlierFiltering(alt);
 
-%% Step 3: Integrate acceleration to position-velocity vectors
+%% Step 3: Convert body frame vectors to inertial frame
+quat_conj = [quat(:,1),-quat(:,2),-quat(:,3),-quat(:,4)];
+
+for ii = 1:numel(t)
+  quat_accel = [0,accel(ii,1),accel(ii,2),accel(ii,3)];
+  q1 = quatMult(quat(ii,:),quat_accel);
+  accel_new(ii) = quatMult(q1,quat_conj(ii,:));
+endfor
+accel = accel_new;
+
+%% Step 4: Integrate acceleration to position-velocity vectors
 t = t/1000; %convert time to seconds
 
 vel = trapz(t,accel) %m/s
 pos = trapz(t,vel) %m
+
 
 %% Step 4: Calculate descent rate from combined altitude data
 DR = diff(alt)./diff(t);
@@ -51,6 +62,7 @@ t_fall = find(abs(DR(t_fall_watch))>17.5)
 t_jump = t(t_fall(1));
 
 n = t_fall(1);
+flag = False;
 while (flag==False)
   if abs(DR(n))<10
     flag = True;
@@ -59,6 +71,10 @@ while (flag==False)
   n = n+1;
 endwhile
 
+t_ind_landing = find((alt(end/2:end)-alt(1))<5); %keep track of times when altitude is 5 meters above ground level after half of the data
+v_horiz = norm([vel(:,1).vel(:,2)])
+landingSpeed = v_horiz(t_ind_landing);
+
 %% Step 6: Grab interesting data points
 maxDR = max(DR);
 maxGs = max(Gs);
@@ -66,7 +82,7 @@ jumpAlt = max(alt);
 maxSpeed = max(speed);
 deploymentOffset = norm([pos(t_jump,1),pos(t_jump,2)]);
 pullAlt = alt(t_pull_ind)-alt(end);
-landSpeed = ;
+maxLandSpeed = max(landingSpeed);
 
 
 
