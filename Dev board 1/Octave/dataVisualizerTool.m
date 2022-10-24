@@ -4,7 +4,7 @@ close all
 clc
 
 %% Step 1: Unpack the CSV
-data = csvread('DATA.csv'); %change filename here to match whatever the correct name is
+data = csvread('DATA2.csv'); %change filename here to match whatever the correct name is
 
 %drop the first line of data, its probably bad
 data = data([2:end],:);
@@ -27,22 +27,35 @@ alt = dynamicOutlierFiltering(alt);
 %% Step 3: Convert body frame vectors to inertial frame
 quat_conj = [quat(:,1),-quat(:,2),-quat(:,3),-quat(:,4)];
 
-for ii = 1:numel(t)
+accel_new = zeros(numel(t)-1,3);
+for ii = 1:(numel(t)-1)
   quat_accel = [0,accel(ii,1),accel(ii,2),accel(ii,3)];
   q1 = quatMult(quat(ii,:),quat_accel);
-  accel_new(ii) = quatMult(q1,quat_conj(ii,:));
+  q = quatMult(q1,quat_conj(ii,:));
+  accel_new(ii,1) = q(2);
+  accel_new(ii,2) = q(3);
+  accel_new(ii,3) = q(4);
 endfor
-accel = accel_new;
+
+accel = [0,0,0;accel_new];
 
 %% Step 4: Integrate acceleration to position-velocity vectors
 t = t/1000; %convert time to seconds
 
-vel = trapz(t,accel) %m/s
-pos = trapz(t,vel) %m
+for jj = [1,2,3]
+  for ii = 1:numel(t)
+    vel(ii,jj) = trapz(t(1:ii),accel(1:ii,jj)); %m/s
+  endfor
+endfor
 
+for jj = [1,2,3]
+  for ii = 1:numel(t)
+    pos(ii,jj) = trapz(t(1:ii),vel(1:ii,jj)); %m/s
+  endfor
+endfor
 
 %% Step 4: Calculate descent rate from combined altitude data
-DR = diff(alt)./diff(t);
+DR = diff(alt)./diff(t(2:end));
 
 %% Step 5: Play with data a little bit and determine when the user jumps out of the plane
 for ii = 1:numel(t)
@@ -56,9 +69,9 @@ t_fall_assum = 900; %assume freefall and parachute and data off takes 15 minutes
 avg_t_diff = mean(diff(t));
 t_ind_fall_assum = round(t_fall_assum/avg_t_diff);
 
-t_fall_watch = t(t_ind_fall_assum:end)
+t_fall_watch = t(t_ind_fall_assum:end);
 
-t_fall = find(abs(DR(t_fall_watch))>17.5)
+t_fall = find(abs(DR(t_fall_watch))>17.5);
 t_jump = t(t_fall(1));
 
 n = t_fall(1);

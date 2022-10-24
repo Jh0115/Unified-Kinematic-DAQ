@@ -1,7 +1,7 @@
 %% quaternion multiplication tool
 % assumes quaternions are in order [mag,i,j,k]
 function q3 = quatMult(q1,q2)
-  if numel(q1~=4)||numel(q2~=4)
+  if numel(q1)~=4||numel(q2)~=4
     error("one of the inputs is not in quaternion format")
   endif
 
