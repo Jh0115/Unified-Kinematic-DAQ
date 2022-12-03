@@ -1,9 +1,0 @@
-14:49:32 **** Incremental Build of configuration Debug for project Hello_World ****
-make ECLIPSE=1 all 
-/C/Users/Joseph/eclipse/Firmware/MAX32660/Libraries/MAX32660PeriphDriver/periphdriver.mk:75: target `/c/Users/Joseph/Documents/UKDAQ/Unified-Kinematic-DAQ/Dev' given more than once in the same rule.
-/C/Users/Joseph/eclipse/Firmware/MAX32660/Libraries/MAX32660PeriphDriver/periphdriver.mk:75: target `/c/Users/Joseph/Documents/UKDAQ/Unified-Kinematic-DAQ/Dev' given more than once in the same rule.
-/C/Users/Joseph/eclipse/Firmware/MAX32660/Libraries/MAX32660PeriphDriver/periphdriver.mk:75: target `board' given more than once in the same rule.
-make: *** /c/Users/Joseph/Documents/UKDAQ/Unified-Kinematic-DAQ/Dev: Invalid request code.  Stop.
-
-14:49:32 Build Finished (took 390ms)
-
