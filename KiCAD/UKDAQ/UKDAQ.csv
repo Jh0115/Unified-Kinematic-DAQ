@@ -49,4 +49,4 @@ PI4ULS5V202XVEXCT-ND,1,U2,PI4ULS5V202,Joseph:PI4ULS5V202,UDFN-8,,https://www.dig
 Arrow products - BNO055,1,U3,BNO055,Joseph:BNO055,Custom,,https://www.bosch-sensortec.com/products/smart-sensors/bno055/
 828-1063-1-ND,1,U4,BME280,Joseph:BME280,Custom,,
 MAX32660GTG+-ND,1,U5,MAX32660-24TQFN-EP,Joseph:MAX32660-24TQFN-EP,24TQFN-EP,,https://www.digikey.com/en/products/detail/analog-devices-inc-maxim-integrated/MAX32660GTG/9761525
-3003-9HT10-32.768KDZF-TTR-ND,1,Y1,Crystal,Device:Crystal,,~,https://www.digikey.com/en/products/detail/fts/9HT10-32-768KDZF-T/15997998
+3003-9HT10-32.768KDZF-TTR-ND,1,Y1,Crystal,Device:Crystal,2 pin SMD,~,https://www.digikey.com/en/products/detail/fts/9HT10-32-768KDZF-T/15997998
