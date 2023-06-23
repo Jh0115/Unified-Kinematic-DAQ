@@ -1,52 +1,17 @@
-Source:,C:\Users\Joseph\Documents\UKDAQ\Unified-Kinematic-DAQ\KiCAD\UKDAQ\UKDAQ.kicad_sch,,,,,,
-Date:,12/4/2022 19:51,,,,,,
-Tool:,Eeschema (6.0.7),,,,,,
-Generator:,C:\Program Files\KiCad\6.0\bin\scripting\plugins/bom_csv_grouped_by_value.py,,,,,,
-Component Count:,22,,,,,,
-,,,,,,,
-Individual Components:,,,,,,,
-,,,,,,,
-Item,Qty,Reference(s),Value,LibPart,Footprint,Datasheet,
-,,C1,1 uF,Device:C,,~,
-,,C2,1 uF,Device:C,,~,
-,,C3,~1 mF,Device:C_Polarized_US,Custom,~,
-,,C4,120 nF,Device:C,,~,
-,,C5,6 pF,Device:C,,~,
-,,C6,100 nF,Device:C,,~,
-,,C7,100 nF,Device:C,,~,
-,,C8,6 pF,Device:C,,~,
-,,C9,1 uF,Device:C,,~,
-,,C10,1 uF,Device:C,,~,
-,,J1,5 pin Molex (0537800570),Connector:Conn_01x05_Male,,~,
-,,R1,10k,Device:R,,~,
-,,R2,10,Device:R,,~,
-,,R3,10k,Device:R,,~,
-,,R4,4.7k,Device:R,,~,
-,,R5,4.7k,Device:R,,~,
-,,U1,AP2210N_SOT-23-3,Joseph:AP2210N_SOT-23-3,SOT-23-3,,
-,,U2,PI4ULS5V202,Joseph:PI4ULS5V202,UDFN-8,,
-,,U3,BNO055,Joseph:BNO055,Custom,,
-,,U4,BME280,Joseph:BME280,Custom,,
-,,U5,MAX32660-24TQFN-EP,Joseph:MAX32660-24TQFN-EP,Custom,,
-,,Y1,Crystal,Device:Crystal,,~,
-,,,,,,,
-,,,,,,,
-,,,,,,,
-Collated Components:,,,,,,,
-,,,,,,,
-Item,Qty,Reference(s),Value,LibPart,Footprint,Datasheet,
-490-7229-1-ND,4,"C1, C2, C9, C10",1 uF,Device:C,0201,~,https://www.digikey.com/en/products/detail/murata-electronics/GRM033R60J105MEA2D/4213369?s=N4IgTCBcDaICwE4AMBaA7GMCUEYUDkAREAXQF8g
-493-3773-1-ND,1,C3,~1 mF,Device:C_Polarized_US,Custom,~,https://www.digikey.com/en/products/detail/nichicon/RHS0J821MCN1GS/2209463
-399-17396-1-ND,1,C4,120 nF,Device:C,0603,~,https://www.digikey.com/en/products/detail/kemet/C0603C124J4RAC7867/2199885
-587-5715-1-ND,2,"C5, C8",6 pF,Device:C,01005,~,https://www.digikey.com/en/products/detail/taiyo-yuden/TMK042CG060BD-W/7431121
-1292-1391-1-ND,2,"C6, C7",100 nF,Device:C,0603,~,https://www.digikey.com/en/products/detail/walsin-technology-corporation/0603B104J500CT/9354888
-6,1,J1,5 pin Molex (0537800570),Connector:Conn_01x05_Male,,~,
-P10KCPCT-ND,2,"R1, R3",10k,Device:R,0402,~,https://www.digikey.com/en/products/detail/panasonic-electronic-components/ERA-2ARB103X/5140930
-541-10.0ABCT-ND,1,R2,10,Device:R,0201,~,https://www.digikey.com/en/products/detail/vishay-dale/CRCW020110R0FNED/1178471
-P4.7KDCCT-ND,2,"R4, R5",4.7k,Device:R,0402,~,https://www.digikey.com/en/products/detail/panasonic-electronic-components/ERA-2AEB472X/1706021
-AP2210N-3.3TRG1DICT-ND,1,U1,AP2210N_SOT-23-3,Joseph:AP2210N_SOT-23-3,SOT-23-3,,https://www.digikey.com/en/products/detail/diodes-incorporated/AP2210N-3-3TRG1/4470822?s=N4IgTCBcDaIIIAUxgIwAYByBaAzAOhwBUAlAcRQBEBJAYUKwwpAF0BfIA
-PI4ULS5V202XVEXCT-ND,1,U2,PI4ULS5V202,Joseph:PI4ULS5V202,UDFN-8,,https://www.digikey.com/en/products/detail/diodes-incorporated/PI4ULS5V202XVEX/4147095?s=N4IgTCBcDaIAoEkAsBVAMgZQKwDUwAYwANHAUSIGEAVAWgDkAREAXQF8g
-Arrow products - BNO055,1,U3,BNO055,Joseph:BNO055,Custom,,https://www.bosch-sensortec.com/products/smart-sensors/bno055/
-828-1063-1-ND,1,U4,BME280,Joseph:BME280,Custom,,
-MAX32660GTG+-ND,1,U5,MAX32660-24TQFN-EP,Joseph:MAX32660-24TQFN-EP,24TQFN-EP,,https://www.digikey.com/en/products/detail/analog-devices-inc-maxim-integrated/MAX32660GTG/9761525
-3003-9HT10-32.768KDZF-TTR-ND,1,Y1,Crystal,Device:Crystal,2 pin SMD,~,https://www.digikey.com/en/products/detail/fts/9HT10-32-768KDZF-T/15997998
+"Id";"Designator";"Package";"Quantity";"Designation";"Supplier and ref";
+1;"C9,C5,C2,C1";"C_0603_1608Metric";4;"1 uF";;;
+2;"J1";"PinHeader_1x05_P2.54mm_Vertical";1;"5 pin Molex (0537800570)";;;
+3;"U1";"SOT-23";1;"AP2210N_SOT-23-3";;;
+4;"U5";"21-0139V_T2044&plus_5_MXM";1;"MAX32660-20TQFN-EP";;;
+5;"R4,R3";"R_0402_1005Metric";2;"10k";;;
+6;"U4";"BME280";1;"BME280";;;
+7;"C3";"Can Capacitor - 493-3773-1-ND";1;"~1 mF";;;
+8;"U3";"LGA28R50P4X10_380X520X100";1;"BNO055";;;
+9;"R2,R1";"R_0402_1005Metric";2;"4.7k";;;
+10;"C8,C6";"C_0603_1608Metric";2;"6 pF";;;
+11;"Y1";"Crystal_SMD_3215-2Pin_3.2x1.5mm";1;"Crystal";;;
+12;"C7,C10";"C_0603_1608Metric";2;"100 nF";;;
+13;"C4";"C_0603_1608Metric";1;"120 nF";;;
+14;"J2";"PinHeader_1x11_P2.54mm_Vertical";1;"Conn_01x11_Male";;;
+15;"U2";"MSOP-8";1;"PI4ULS5V202";;;
+16;"R5";"R_0402_1005Metric";1;"10";;;

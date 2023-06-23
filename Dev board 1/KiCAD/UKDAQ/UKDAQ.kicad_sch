@@ -2744,7 +2744,7 @@
     (property "Value" "MAX32660-20TQFN-EP" (id 1) (at 40.64 186.0549 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Footprint" "Package_DFN_QFN:TQFN-20-1EP_5x5mm_P0.65mm_EP3.1x3.1mm" (id 2) (at 63.5 185.42 0)
+    (property "Footprint" "Joseph:21-0139V_T2044&plus_5_MXM" (id 2) (at 63.5 185.42 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "" (id 3) (at 63.5 185.42 0)
@@ -2985,7 +2985,7 @@
       (reference "U4") (unit 1) (value "BME280") (footprint "Joseph:BME280")
     )
     (path "/ecd46510-660b-4043-b957-ccc94f56b0ca"
-      (reference "U5") (unit 1) (value "MAX32660-20TQFN-EP") (footprint "Package_DFN_QFN:TQFN-20-1EP_5x5mm_P0.65mm_EP3.1x3.1mm")
+      (reference "U5") (unit 1) (value "MAX32660-20TQFN-EP") (footprint "Joseph:21-0139V_T2044&plus_5_MXM")
     )
     (path "/b83c4dba-2e1b-4066-afd5-e4ee51eb7927"
       (reference "Y1") (unit 1) (value "Crystal") (footprint "Crystal:Crystal_SMD_3215-2Pin_3.2x1.5mm")
