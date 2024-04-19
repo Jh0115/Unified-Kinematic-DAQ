@@ -8,14 +8,14 @@ a desire to slow down
 // Define a stepper and the pins it will use
 AccelStepper stepper(1,7,6); //1 is driving mode, 7 is pulse, 6 is direction
 
-int targSpeed = 3000; // The target speed in steps/sec (maximum seems to be around 1850 for full steps with no load)
+int targSpeed = 1000; // The target speed in steps/sec (maximum seems to be around 1850 for full steps with no load)
 float currSpeed = 0; // current speed in steps/sec
-float accel = 500; //acceleration limit in steps/sec/sec
+float accel = 25; //acceleration limit in steps/sec/sec
 
 unsigned long t_prev;
 unsigned long t_curr;
 unsigned long dt;
-unsigned long t_run = 2000; //maximum run time in milliseconds
+unsigned long t_run = 20000; //maximum run time in milliseconds
 
 void setup()
 {  
@@ -34,12 +34,15 @@ void setup()
   stepper.setMaxSpeed(10000); // determining the max speed experimentally
   stepper.setSpeed(0); // initial speed is zero
 
-  delay(5000);
-  t_curr = millis();
+  delay(1000);
 }
 
 void loop()
 {
+
+  stepper.setSpeed(0); // initial speed is zero
+  t_curr = millis();
+
   while(currSpeed<targSpeed){
     //every instance increase the currSpeed proportionally to the time passed since the last instance then update the setspeed command
     t_prev = t_curr;
@@ -94,11 +97,14 @@ void loop()
   }
 
   
-  stepper.setSpeed(500);
+  stepper.setSpeed(0);
   stepper.runSpeed();
+  currSpeed = 0;
 
-  while(true){ //pause here until reset button is pressed NOT YET IMPLEMENTED
+  //while(true){ //pause here until reset button is pressed NOT YET IMPLEMENTED
 
-  }
+  //}
+
+  delay(2000);
 
 }
