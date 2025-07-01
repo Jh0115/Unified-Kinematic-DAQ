@@ -8,9 +8,9 @@ a desire to slow down
 // Define a stepper and the pins it will use
 AccelStepper stepper(1,7,6); //1 is driving mode, 7 is pulse, 6 is direction
 
-int targSpeed = 1000; // The target speed in steps/sec (maximum seems to be around 1850 for full steps with no load)
+int targSpeed = 600; // The target speed in steps/sec (maximum seems to be around 1850 for full steps with no load) (200 steps per cycle probably so targSpeed = hz*200)
 float currSpeed = 0; // current speed in steps/sec
-float accel = 25; //acceleration limit in steps/sec/sec
+float accel = 5; //acceleration limit in steps/sec/sec
 
 unsigned long t_prev;
 unsigned long t_curr;
@@ -20,8 +20,8 @@ unsigned long t_run = 20000; //maximum run time in milliseconds
 void setup()
 {  
 
-  Serial.begin(9600);
-  Serial.println("-----------------------------------------");
+  //Serial.begin(9600);
+  //Serial.println("-----------------------------------------");
 
   // This is my short term method of setting the other driver pins to the correct value. This should be replaced by hardwire to voltage supply in the future.
   pinMode(5,OUTPUT);
@@ -52,19 +52,17 @@ void loop()
     dt = (t_curr-t_prev);
     stepper.runSpeed();
 
-    currSpeed = currSpeed+accel*(float)dt/1000; //to calculate the new speed do the math under type float then convert to integer later. We do this because if we calculate under type integer the while loop is too fast and the currSpeed doesnt update
+    currSpeed = currSpeed+accel*(float)dt/1000; //to calculate the new speed do the math under type float. We do this because if we calculate under type integer the while loop is too fast and the currSpeed doesnt update
     stepper.runSpeed();
     stepper.setSpeed(currSpeed);
     stepper.runSpeed();
   }
 
-  Serial.println("Target speed reached");
+  //Serial.println("Target speed reached");
   stepper.setSpeed(targSpeed);
   t_prev = millis();
 
   while(dt<t_run){ //while the designated spin time has not been breached
-    //check to see if button has been pressed
-    //STILL TO DO
 
     //set speed
     stepper.runSpeed();
@@ -73,7 +71,7 @@ void loop()
     dt = millis()-t_prev;
   }
 
-  Serial.println("Decelerating");
+  //Serial.println("Decelerating");
   stepper.runSpeed();
   
   t_curr = millis();
@@ -101,10 +99,6 @@ void loop()
   stepper.runSpeed();
   currSpeed = 0;
 
-  //while(true){ //pause here until reset button is pressed NOT YET IMPLEMENTED
-
-  //}
-
-  delay(2000);
-
+  while(true){ //pause here until reset button is pressed
+  }
 }
